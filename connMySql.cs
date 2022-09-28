@@ -1,12 +1,32 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data;
+using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace _211074
 {
     public class connMySql
     {
+        public static MySqlConnection conexao;
+        public static MySqlCommand comando;
+        public static MySqlDataAdapter adaptador;
+        public static DataTable datTabela;
+
+        public static void AbrirConexao()
+        {
+            try
+            {
+                string server = "localhost";
+                string porta = "3307";
+                string uid = "root";
+                string pwd = "etecjau";
+
+                conexao = new MySqlConnection($"server={server};port={porta};uid={uid};pwd={pwd}");
+                conexao.Open();
+            } catch (Exception err)
+            {
+                MessageBox.Show(err.Message, "Erro [connMySql.cs]", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
