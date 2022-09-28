@@ -16,12 +16,12 @@ namespace _211074
         {
             try
             {
-                string server = "localhost";
+                /*string server = "localhost";
                 string porta = "3307";
                 string uid = "root";
-                string pwd = "etecjau";
+                string pwd = "etecjau";*/
 
-                conexao = new MySqlConnection($"server={server};port={porta};uid={uid};pwd={pwd}");
+                conexao = new MySqlConnection($"server=localhost;port=3307;uid=root;pwd=etecjau");
                 conexao.Open();
             } catch (Exception err)
             {
@@ -47,6 +47,12 @@ namespace _211074
                 AbrirConexao();
 
                 comando = new MySqlCommand("CREATE DATABASE IF NOT EXISTS vendas; USE vendas", conexao);
+                comando.ExecuteNonQuery();
+
+                comando = new MySqlCommand("CREATE TABLE IF NOT EXISTS Cidades " +
+                    "(id integer auto_increment primary key, " +
+                    "nome char(40), " +
+                    "uf char(2))", conexao);
                 comando.ExecuteNonQuery();
 
                 FecharConexao();
