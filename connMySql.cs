@@ -25,7 +25,18 @@ namespace _211074
                 conexao.Open();
             } catch (Exception err)
             {
-                MessageBox.Show(err.Message, "Erro [connMySql.cs]", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(err.Message, "Erro - Abrir Conexão [connMySql.cs]", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public static void FecharConexao()
+        {
+            try
+            {
+                conexao.Close();
+            }catch (Exception err)
+            {
+                MessageBox.Show(err.Message, "Erro - Fechar Conexão [connMySql.cs]", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
