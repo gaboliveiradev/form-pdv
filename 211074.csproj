@@ -89,7 +89,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="connMySql.cs" />
+    <Compile Include="Banco.cs" />
     <Compile Include="View\modules\Cidades\FrmCidade.cs">
       <SubType>Form</SubType>
     </Compile>

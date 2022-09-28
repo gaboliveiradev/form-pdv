@@ -5,7 +5,7 @@ using MySql.Data.MySqlClient;
 
 namespace _211074
 {
-    public class connMySql
+    public class Banco
     {
         public static MySqlConnection conexao;
         public static MySqlCommand comando;
@@ -25,7 +25,7 @@ namespace _211074
                 conexao.Open();
             } catch (Exception err)
             {
-                MessageBox.Show(err.Message, "Erro - Abrir Conexão [connMySql.cs]", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(err.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -36,7 +36,23 @@ namespace _211074
                 conexao.Close();
             }catch (Exception err)
             {
-                MessageBox.Show(err.Message, "Erro - Fechar Conexão [connMySql.cs]", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(err.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public static void CriarBanco()
+        {
+            try
+            {
+                AbrirConexao();
+
+                comando = new MySqlCommand("CREATE DATABASE IF NOT EXISTS vendas; USE vendas", conexao);
+                comando.ExecuteNonQuery();
+
+                FecharConexao();
+            } catch (Exception err)
+            {
+                MessageBox.Show(err.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
