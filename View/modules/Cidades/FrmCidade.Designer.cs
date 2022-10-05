@@ -41,13 +41,13 @@
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnFechar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtPesquisar = new System.Windows.Forms.TextBox();
-            this.dgvCidades = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.dgvCidades = new System.Windows.Forms.DataGridView();
+            this.txtPesquisar = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCidades)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCidades)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -176,32 +176,6 @@
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(2, 17);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(292, 20);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "Digite o nome da Cidade para Pesquisa:\r\n";
-            // 
-            // txtPesquisar
-            // 
-            this.txtPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPesquisar.Location = new System.Drawing.Point(6, 40);
-            this.txtPesquisar.Name = "txtPesquisar";
-            this.txtPesquisar.Size = new System.Drawing.Size(700, 26);
-            this.txtPesquisar.TabIndex = 12;
-            // 
-            // dgvCidades
-            // 
-            this.dgvCidades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCidades.Location = new System.Drawing.Point(6, 71);
-            this.dgvCidades.Name = "dgvCidades";
-            this.dgvCidades.Size = new System.Drawing.Size(760, 157);
-            this.dgvCidades.TabIndex = 13;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -211,6 +185,32 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 14;
             this.pictureBox1.TabStop = false;
+            // 
+            // dgvCidades
+            // 
+            this.dgvCidades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCidades.Location = new System.Drawing.Point(6, 71);
+            this.dgvCidades.Name = "dgvCidades";
+            this.dgvCidades.Size = new System.Drawing.Size(760, 157);
+            this.dgvCidades.TabIndex = 13;
+            // 
+            // txtPesquisar
+            // 
+            this.txtPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPesquisar.Location = new System.Drawing.Point(6, 40);
+            this.txtPesquisar.Name = "txtPesquisar";
+            this.txtPesquisar.Size = new System.Drawing.Size(700, 26);
+            this.txtPesquisar.TabIndex = 12;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(2, 17);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(292, 20);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Digite o nome da Cidade para Pesquisa:\r\n";
             // 
             // FrmCidade
             // 
@@ -235,8 +235,8 @@
             this.Text = "Cadastro de Cidades";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCidades)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCidades)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
