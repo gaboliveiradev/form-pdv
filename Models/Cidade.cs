@@ -49,5 +49,23 @@ namespace _211074.Models
                 MessageBox.Show(err.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        public void Excluir()
+        {
+            try
+            {
+                Banco.AbrirConexao();
+                Banco.comando = new MySqlCommand("DELETE FROM cidades WHERE id = @id", Banco.conexao);
+
+                Banco.comando.Parameters.AddWithValue("@id", id);
+                Banco.comando.ExecuteNonQuery();
+
+                Banco.FecharConexao();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
