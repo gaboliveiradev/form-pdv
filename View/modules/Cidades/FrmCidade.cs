@@ -57,17 +57,42 @@ namespace _211074.View.modules.Cidades
 
         private void btnAlterar_Click(object sender, EventArgs e)
         {
+            if (txtCodigo.Text == String.Empty) return;
 
+            CidadeModel model = new CidadeModel()
+            {
+                id = int.Parse(txtCodigo.Text),
+                nome = txtCidade.Text,
+                uf = txtUf.Text
+            };
+
+            model.Alterar();
+
+            limparControles();
+            carregarGrid("");
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-
+            limparControles();
+            carregarGrid("");
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
+            if(txtCodigo.Text == String.Empty) return;
+            if(MessageBox.Show("Deseja excluir a cidade?", "Exclusão", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                CidadeModel model = new CidadeModel()
+                {
+                    id = int.Parse(txtCodigo.Text)
+                };
 
+                model.Excluir();
+
+                limparControles();
+                carregarGrid("");
+            }
         }
 
         private void btnFechar_Click(object sender, EventArgs e)
@@ -77,7 +102,7 @@ namespace _211074.View.modules.Cidades
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
-
+            carregarGrid(txtPesquisar.Text);
         }
 
         private void dgvCidades_CellClick(object sender, DataGridViewCellEventArgs e)
