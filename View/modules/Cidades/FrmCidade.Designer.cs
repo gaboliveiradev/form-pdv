@@ -41,12 +41,12 @@
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnFechar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnConsultar = new System.Windows.Forms.PictureBox();
             this.dgvCidades = new System.Windows.Forms.DataGridView();
             this.txtPesquisar = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnConsultar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCidades)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,6 +62,7 @@
             // 
             // txtCodigo
             // 
+            this.txtCodigo.Enabled = false;
             this.txtCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCodigo.Location = new System.Drawing.Point(16, 36);
             this.txtCodigo.Name = "txtCodigo";
@@ -172,10 +173,11 @@
             this.btnFechar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnFechar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnFechar.UseVisualStyleBackColor = true;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.pictureBox1);
+            this.groupBox1.Controls.Add(this.btnConsultar);
             this.groupBox1.Controls.Add(this.dgvCidades);
             this.groupBox1.Controls.Add(this.txtPesquisar);
             this.groupBox1.Controls.Add(this.label4);
@@ -185,15 +187,16 @@
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             // 
-            // pictureBox1
+            // btnConsultar
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(716, 16);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 14;
-            this.pictureBox1.TabStop = false;
+            this.btnConsultar.Image = ((System.Drawing.Image)(resources.GetObject("btnConsultar.Image")));
+            this.btnConsultar.Location = new System.Drawing.Point(716, 16);
+            this.btnConsultar.Name = "btnConsultar";
+            this.btnConsultar.Size = new System.Drawing.Size(50, 50);
+            this.btnConsultar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnConsultar.TabIndex = 14;
+            this.btnConsultar.TabStop = false;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // dgvCidades
             // 
@@ -244,7 +247,7 @@
             this.Text = "Cadastro de Cidades";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnConsultar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCidades)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -265,7 +268,7 @@
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnFechar;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox btnConsultar;
         private System.Windows.Forms.DataGridView dgvCidades;
         private System.Windows.Forms.TextBox txtPesquisar;
         private System.Windows.Forms.Label label4;

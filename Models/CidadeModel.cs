@@ -6,7 +6,7 @@ using MySql.Data.MySqlClient;
 
 namespace _211074.Models
 {
-    public class Cidade
+    public class CidadeModel
     {
         public int id { get; set; }
         public string nome { get; set; }
