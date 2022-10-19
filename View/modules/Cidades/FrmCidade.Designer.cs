@@ -205,6 +205,7 @@
             this.dgvCidades.Name = "dgvCidades";
             this.dgvCidades.Size = new System.Drawing.Size(760, 157);
             this.dgvCidades.TabIndex = 13;
+            this.dgvCidades.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCidades_CellClick);
             // 
             // txtPesquisar
             // 

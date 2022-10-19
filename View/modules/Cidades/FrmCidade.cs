@@ -17,22 +17,42 @@ namespace _211074.View.modules.Cidades
         public FrmCidade()
         {
             InitializeComponent();
+            limparControles();
+            carregarGrid("");
+        }
+
+        public void limparControles()
+        {
+            txtCodigo.Clear();
+            txtCidade.Clear();
+            txtUf.Clear();
+            txtPesquisar.Clear();
+        }
+
+        public void carregarGrid(string pesquisa)
+        {
+            CidadeModel model = new CidadeModel()
+            {
+                nome = pesquisa
+            };
+
+            dgvCidades.DataSource = model.Consultar();
         }
 
         private void btnIncluir_Click(object sender, EventArgs e)
         {
             if (txtCidade.Text == String.Empty) return;
 
-            CidadeModel c = new CidadeModel()
+            CidadeModel model = new CidadeModel()
             {
                 nome = txtCidade.Text,
                 uf = txtUf.Text
             };
 
-            c.Incluir();
+            model.Incluir();
 
-            //limparControler();
-            //carregarGrid("");
+            limparControles();
+            carregarGrid("");
         }
 
         private void btnAlterar_Click(object sender, EventArgs e)
@@ -58,6 +78,16 @@ namespace _211074.View.modules.Cidades
         private void btnConsultar_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void dgvCidades_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvCidades.RowCount > 0)
+            {
+                txtCodigo.Text = dgvCidades.CurrentRow.Cells["ID"].Value.ToString();
+                txtCidade.Text = dgvCidades.CurrentRow.Cells["NOME"].Value.ToString();
+                txtUf.Text = dgvCidades.CurrentRow.Cells["UF"].Value.ToString();
+            }
         }
     }
 }
