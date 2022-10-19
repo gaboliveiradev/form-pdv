@@ -11,6 +11,7 @@ namespace _211074.Models
         public int id { get; set; }
         public string nome { get; set; }
         public string uf { get; set; }
+        public string ativo { get; set; }
 
         public void Incluir()
         {
@@ -55,8 +56,9 @@ namespace _211074.Models
             try
             {
                 Banco.AbrirConexao();
-                Banco.comando = new MySqlCommand("DELETE FROM cidades WHERE id = @id", Banco.conexao);
+                Banco.comando = new MySqlCommand("UPDATE cidades SET ativo = @ativo WHERE id = @id", Banco.conexao);
 
+                Banco.comando.Parameters.AddWithValue("@ativo", ativo);
                 Banco.comando.Parameters.AddWithValue("@id", id);
                 Banco.comando.ExecuteNonQuery();
 
@@ -73,8 +75,7 @@ namespace _211074.Models
             try
             {
                 Banco.AbrirConexao();
-                Banco.comando = new MySqlCommand("SELECT * FROM Cidades WHERE nome LIKE @nome " +
-                "ORDER BY nome", Banco.conexao);
+                Banco.comando = new MySqlCommand("SELECT * FROM Cidades WHERE ativo = \"S\" AND nome LIKE @nome ORDER BY nome;", Banco.conexao);
 
                 Banco.comando.Parameters.AddWithValue("@nome", nome + "%");
                 Banco.adaptador = new MySqlDataAdapter(Banco.comando);

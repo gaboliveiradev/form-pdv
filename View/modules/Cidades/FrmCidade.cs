@@ -85,7 +85,8 @@ namespace _211074.View.modules.Cidades
             {
                 CidadeModel model = new CidadeModel()
                 {
-                    id = int.Parse(txtCodigo.Text)
+                    id = int.Parse(txtCodigo.Text),
+                    ativo = "N"
                 };
 
                 model.Excluir();
