@@ -56,6 +56,11 @@ namespace _211074
                     "ativo char(1) NOT NULL DEFAULT \"S\" )", conexao);
                 comando.ExecuteNonQuery();
 
+                comando = new MySqlCommand("CREATE TABLE IF NOT EXISTS Marcas " +
+                    "(id integer auto_increment primary key, " +
+                    "marca char(20))", conexao);
+                comando.ExecuteNonQuery();
+
                 FecharConexao();
             } catch (Exception err)
             {
