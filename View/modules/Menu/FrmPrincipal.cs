@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 
 using _211074.View.modules.Cidades;
-using _211074.View.modules.Marcas
+using _211074.View.modules.Marcas;
 
 namespace _211074
 {
