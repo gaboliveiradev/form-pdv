@@ -27,7 +27,7 @@ namespace _211074.View.modules.Categorias
                 marca = pesquisa
             };
 
-            dgvCategoria.DataSource = model.Consultar();
+            dgvCategorias.DataSource = model.Consultar();
         }
 
 
@@ -98,10 +98,10 @@ namespace _211074.View.modules.Categorias
 
         private void dgvCategoria_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgvCategoria.RowCount > 0)
+            if (dgvCategorias.RowCount > 0)
             {
-                txtCodigo.Text = dgvCategoria.CurrentRow.Cells["ID"].Value.ToString();
-                txtCategoria.Text = dgvCategoria.CurrentRow.Cells["CATEGORIA"].Value.ToString();
+                txtCodigo.Text = dgvCategorias.CurrentRow.Cells["ID"].Value.ToString();
+                txtCategoria.Text = dgvCategorias.CurrentRow.Cells["CATEGORIA"].Value.ToString();
             }
         }
     }

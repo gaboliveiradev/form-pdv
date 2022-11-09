@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCategoria));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnConsultar = new System.Windows.Forms.PictureBox();
-            this.dgvCategoria = new System.Windows.Forms.DataGridView();
+            this.dgvCategorias = new System.Windows.Forms.DataGridView();
             this.txtPesquisar = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnFechar = new System.Windows.Forms.Button();
@@ -45,13 +45,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnConsultar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCategoria)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCategorias)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.btnConsultar);
-            this.groupBox1.Controls.Add(this.dgvCategoria);
+            this.groupBox1.Controls.Add(this.dgvCategorias);
             this.groupBox1.Controls.Add(this.txtPesquisar);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Location = new System.Drawing.Point(16, 206);
@@ -71,14 +71,14 @@
             this.btnConsultar.TabStop = false;
             this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
-            // dgvCategoria
+            // dgvCategorias
             // 
-            this.dgvCategoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCategoria.Location = new System.Drawing.Point(6, 71);
-            this.dgvCategoria.Name = "dgvCategoria";
-            this.dgvCategoria.Size = new System.Drawing.Size(760, 157);
-            this.dgvCategoria.TabIndex = 13;
-            this.dgvCategoria.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCategoria_CellClick);
+            this.dgvCategorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCategorias.Location = new System.Drawing.Point(6, 71);
+            this.dgvCategorias.Name = "dgvCategorias";
+            this.dgvCategorias.Size = new System.Drawing.Size(760, 157);
+            this.dgvCategorias.TabIndex = 13;
+            this.dgvCategorias.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCategoria_CellClick);
             // 
             // txtPesquisar
             // 
@@ -94,9 +94,9 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(2, 17);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(286, 20);
+            this.label4.Size = new System.Drawing.Size(311, 20);
             this.label4.TabIndex = 12;
-            this.label4.Text = "Digite o nome da Marca para Pesquisa:\r\n";
+            this.label4.Text = "Digite o nome da Categoria para Pesquisa:\r\n";
             // 
             // btnFechar
             // 
@@ -227,7 +227,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnConsultar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCategoria)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCategorias)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -237,7 +237,7 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.PictureBox btnConsultar;
-        private System.Windows.Forms.DataGridView dgvCategoria;
+        private System.Windows.Forms.DataGridView dgvCategorias;
         private System.Windows.Forms.TextBox txtPesquisar;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnFechar;
