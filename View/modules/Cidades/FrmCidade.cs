@@ -38,8 +38,8 @@ namespace _211074.View.modules.Cidades
 
             CidadeModel model = new CidadeModel()
             {
-                nome = txtCidade.Text,
-                uf = txtUf.Text
+                nome = txtCidade.Text.ToUpper(),
+                uf = txtUf.Text.ToUpper()
             };
 
             model.Incluir();
@@ -55,8 +55,8 @@ namespace _211074.View.modules.Cidades
             CidadeModel model = new CidadeModel()
             {
                 id = int.Parse(txtCodigo.Text),
-                nome = txtCidade.Text,
-                uf = txtUf.Text
+                nome = txtCidade.Text.ToUpper(),
+                uf = txtUf.Text.ToUpper()
             };
 
             model.Alterar();

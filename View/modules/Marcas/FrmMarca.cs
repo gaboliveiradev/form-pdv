@@ -44,7 +44,7 @@ namespace _211074.View.modules.Marcas
 
             MarcaModel model = new MarcaModel()
             {
-                marca = txtMarca.Text,
+                marca = txtMarca.Text.ToUpper(),
             };
 
             model.Incluir();
@@ -60,7 +60,7 @@ namespace _211074.View.modules.Marcas
             MarcaModel model = new MarcaModel()
             {
                 id = int.Parse(txtCodigo.Text),
-                marca = txtMarca.Text,
+                marca = txtMarca.Text.ToUpper(),
             };
 
             model.Alterar();
@@ -90,6 +90,25 @@ namespace _211074.View.modules.Marcas
 
                 limparControles();
                 carregarGrid("");
+            }
+        }
+
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnConsultar_Click(object sender, EventArgs e)
+        {
+            carregarGrid(txtPesquisar.Text);
+        }
+
+        private void dgvMarcas_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvMarcas.RowCount > 0)
+            {
+                txtCodigo.Text = dgvMarcas.CurrentRow.Cells["ID"].Value.ToString();
+                txtMarca.Text = dgvMarcas.CurrentRow.Cells["MARCA"].Value.ToString();
             }
         }
     }

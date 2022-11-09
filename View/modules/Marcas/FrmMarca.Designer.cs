@@ -69,6 +69,7 @@
             this.btnConsultar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnConsultar.TabIndex = 14;
             this.btnConsultar.TabStop = false;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // dgvMarcas
             // 
@@ -77,6 +78,7 @@
             this.dgvMarcas.Name = "dgvMarcas";
             this.dgvMarcas.Size = new System.Drawing.Size(760, 157);
             this.dgvMarcas.TabIndex = 13;
+            this.dgvMarcas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMarcas_CellClick);
             // 
             // txtPesquisar
             // 
@@ -108,6 +110,7 @@
             this.btnFechar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnFechar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnFechar.UseVisualStyleBackColor = true;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
             // btnExcluir
             // 
