@@ -7,14 +7,38 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using _211074.Models;
 
 namespace _211074.View.modules.Marcas
 {
     public partial class FrmMarca : Form
     {
+
         public FrmMarca()
         {
             InitializeComponent();
+            limparControles();
+            carregarGrid("");
         }
+
+        public void limparControles()
+        {
+            txtCodigo.Clear();
+            txtMarca.Clear();
+            txtPesquisar.Clear();
+        }
+
+        public void carregarGrid(string pesquisa)
+        {
+            MarcaModel model = new MarcaModel()
+            {
+                marca = pesquisa
+            };
+
+            dgvMarcas.DataSource = model.Consultar();
+        }
+
+
+
     }
 }
