@@ -74,5 +74,23 @@ namespace _211074.View.modules.Marcas
             limparControles();
             carregarGrid("");
         }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            if (txtCodigo.Text == String.Empty) return;
+            if (MessageBox.Show("Deseja excluir a marca?", "Exclusão", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                MarcaModel model = new MarcaModel()
+                {
+                    id = int.Parse(txtCodigo.Text),
+                    ativo = "N"
+                };
+
+                model.Excluir();
+
+                limparControles();
+                carregarGrid("");
+            }
+        }
     }
 }

@@ -9,6 +9,7 @@ namespace _211074.Models
     {
         public int id { get; set; }
         public string marca { get; set; }
+        public string ativo { get; set; }
 
         public void Incluir()
         {
@@ -50,8 +51,9 @@ namespace _211074.Models
             try
             {
                 Banco.AbrirConexao();
-                Banco.comando = new MySqlCommand("DELETE FROM marcas WHERE id = @id", Banco.conexao);
+                Banco.comando = new MySqlCommand("UPDATE marcas SET ativo = @ativo WHERE id = @id", Banco.conexao);
 
+                Banco.comando.Parameters.AddWithValue("@ativo", ativo);
                 Banco.comando.Parameters.AddWithValue("@id", id);
                 Banco.comando.ExecuteNonQuery();
 
