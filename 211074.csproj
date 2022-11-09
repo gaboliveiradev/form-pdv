@@ -93,6 +93,12 @@
     <Compile Include="Models\CategoriaModel.cs" />
     <Compile Include="Models\CidadeModel.cs" />
     <Compile Include="Models\MarcaModel.cs" />
+    <Compile Include="View\modules\Categorias\FrmCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\modules\Categorias\FrmCategoria.Designer.cs">
+      <DependentUpon>FrmCategoria.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\modules\Cidades\FrmCidade.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +128,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\modules\Categorias\FrmCategoria.resx">
+      <DependentUpon>FrmCategoria.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\modules\Cidades\FrmCidade.resx">
       <DependentUpon>FrmCidade.cs</DependentUpon>
     </EmbeddedResource>

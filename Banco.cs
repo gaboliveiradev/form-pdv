@@ -64,7 +64,7 @@ namespace _211074
 
                 comando = new MySqlCommand("CREATE TABLE IF NOT EXISTS Categorias" +
                     "(id integer auto_increment primary key, " +
-                    "categoria char(20) " +
+                    "categoria char(20), " +
                     "ativo char(1) NOT NULL DEFAULT \"S\" )", conexao);
                 comando.ExecuteNonQuery();
 
