@@ -91,6 +91,7 @@
   <ItemGroup>
     <Compile Include="Banco.cs" />
     <Compile Include="Models\CidadeModel.cs" />
+    <Compile Include="Models\MarcaModel.cs" />
     <Compile Include="View\modules\Cidades\FrmCidade.cs">
       <SubType>Form</SubType>
     </Compile>
