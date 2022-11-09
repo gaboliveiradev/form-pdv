@@ -52,5 +52,21 @@ namespace _211074.View.modules.Marcas
             limparControles();
             carregarGrid("");
         }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            if (txtCodigo.Text == String.Empty) return;
+
+            MarcaModel model = new MarcaModel()
+            {
+                id = int.Parse(txtCodigo.Text),
+                marca = txtMarca.Text,
+            };
+
+            model.Alterar();
+
+            limparControles();
+            carregarGrid("");
+        }
     }
 }
