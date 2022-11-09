@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 
 using _211074.View.modules.Cidades;
+using _211074.View.modules.Marcas
 
 namespace _211074
 {
@@ -21,6 +22,12 @@ namespace _211074
         {
             FrmCidade frmCidade = new FrmCidade();
             frmCidade.Show();
+        }
+
+        private void marcasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmMarca frmMarca = new FrmMarca();
+            frmMarca.Show();
         }
     }
 }
