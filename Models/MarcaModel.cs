@@ -1,10 +1,6 @@
 ﻿using System;
+using System.Data;
 using System.Windows.Forms;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 using MySql.Data.MySqlClient;
 
 namespace _211074.Models
@@ -54,7 +50,7 @@ namespace _211074.Models
             try
             {
                 Banco.AbrirConexao();
-                Banco.comando = new MySqlCommand("DELETE FROM marcas WHERE id = @id");
+                Banco.comando = new MySqlCommand("DELETE FROM marcas WHERE id = @id", Banco.conexao);
 
                 Banco.comando.Parameters.AddWithValue("@id", id);
                 Banco.comando.ExecuteNonQuery();
@@ -63,6 +59,28 @@ namespace _211074.Models
             } catch (Exception err)
             {
                 MessageBox.Show(err.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public DataTable Consultar() 
+        {
+            try
+            {
+                Banco.AbrirConexao();
+                Banco.comando = new MySqlCommand("SELECT * FROM marcas WHERE marca LIKE @marca " +
+                    "ORDER BY marca", Banco.conexao);
+
+                Banco.comando.Parameters.AddWithValue("@marca", marca + "%");
+                Banco.adaptador = new MySqlDataAdapter(Banco.comando);
+                Banco.datTabela = new DataTable();
+                Banco.adaptador.Fill(Banco.datTabela);
+
+                Banco.FecharConexao();
+                return Banco.datTabela;
+            } catch (Exception err)
+            {
+                MessageBox.Show(err.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
             }
         }
     }
