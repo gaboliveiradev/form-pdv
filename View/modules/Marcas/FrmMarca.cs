@@ -38,7 +38,19 @@ namespace _211074.View.modules.Marcas
             dgvMarcas.DataSource = model.Consultar();
         }
 
+        private void btnIncluir_Click(object sender, EventArgs e)
+        {
+            if (txtMarca.Text == String.Empty) return;
 
+            MarcaModel model = new MarcaModel()
+            {
+                marca = txtMarca.Text,
+            };
 
+            model.Incluir();
+
+            limparControles();
+            carregarGrid("");
+        }
     }
 }
