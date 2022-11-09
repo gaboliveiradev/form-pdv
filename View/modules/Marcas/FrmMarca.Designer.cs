@@ -203,6 +203,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ControlBox = false;
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnFechar);
             this.Controls.Add(this.btnExcluir);
@@ -214,6 +215,7 @@
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.label1);
             this.Name = "FrmMarca";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Marcas";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

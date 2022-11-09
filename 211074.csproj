@@ -98,6 +98,12 @@
     <Compile Include="View\modules\Cidades\FrmCidade.Designer.cs">
       <DependentUpon>FrmCidade.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\modules\Marcas\FrmMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\modules\Marcas\FrmMarca.Designer.cs">
+      <DependentUpon>FrmMarca.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\modules\Menu\FrmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +123,9 @@
     </Compile>
     <EmbeddedResource Include="View\modules\Cidades\FrmCidade.resx">
       <DependentUpon>FrmCidade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\modules\Marcas\FrmMarca.resx">
+      <DependentUpon>FrmMarca.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\modules\Menu\FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
