@@ -92,6 +92,7 @@
     <Compile Include="Banco.cs" />
     <Compile Include="Models\CategoriaModel.cs" />
     <Compile Include="Models\CidadeModel.cs" />
+    <Compile Include="Models\ClienteModel.cs" />
     <Compile Include="Models\MarcaModel.cs" />
     <Compile Include="View\modules\Categorias\FrmCategoria.cs">
       <SubType>Form</SubType>
