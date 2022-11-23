@@ -1,11 +1,8 @@
-﻿using MySql.Data.MySqlClient;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System;
+using System.Data;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace _211074.Models
 {
@@ -87,6 +84,30 @@ namespace _211074.Models
             catch (Exception err)
             {
                 MessageBox.Show(err.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public DataTable Consultar()
+        {
+            try
+            {
+                Banco.AbrirConexao();
+                Banco.comando = new MySqlCommand("SELECT cl.*, ci.nome cidade, " +
+                "ci.uf FROM clientes INNER JOIN cidades ci ON (c.id = cl.id_cidade) " +
+                "WHERE cl.nome LIKE @nome ORDER BY cl.nome", Banco.conexao);
+
+                Banco.comando.Parameters.AddWithValue("@nome", nome + "%");
+                Banco.adaptador = new MySqlDataAdapter(Banco.comando);
+                Banco.datTabela = new DataTable();
+                Banco.adaptador.Fill(Banco.datTabela);
+
+                Banco.FecharConexao();
+                return Banco.datTabela;
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
             }
         }
     }
