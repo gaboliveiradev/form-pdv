@@ -62,7 +62,24 @@ namespace _211074.Models
                 Banco.comando.Parameters.AddWithValue("@cpf", cpf);
                 Banco.comando.Parameters.AddWithValue("@foto", foto);
                 Banco.comando.Parameters.AddWithValue("@venda", venda);
-                Banco.comando.Parameters.AddWithValue("@id", venda);
+                Banco.comando.Parameters.AddWithValue("@id", id);
+                Banco.comando.ExecuteNonQuery();
+
+                Banco.FecharConexao();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void Excluir()
+        {
+            try
+            {
+                Banco.AbrirConexao();
+                Banco.comando = new MySqlCommand("DELETE FROM clientes WHERE id = @id", Banco.conexao);
+                Banco.comando.Parameters.AddWithValue("@id", id);
                 Banco.comando.ExecuteNonQuery();
 
                 Banco.FecharConexao();
