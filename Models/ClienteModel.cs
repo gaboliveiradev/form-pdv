@@ -45,5 +45,32 @@ namespace _211074.Models
                 MessageBox.Show(err.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        public void Alterar()
+        {
+            try
+            {
+                Banco.AbrirConexao();
+                Banco.comando = new MySqlCommand("UPDATE clientes SET nome = @nome, id_cidade = @id_cidade, " +
+                "data_nasc = @data_nasc, renda = @renda, cpf = @cpf, foto = @foto, venda = @venda, " +
+                "WHERE id = @id", Banco.conexao);
+
+                Banco.comando.Parameters.AddWithValue("@nome", nome);
+                Banco.comando.Parameters.AddWithValue("@id_cidade", id_cidade);
+                Banco.comando.Parameters.AddWithValue("@data_nasc", data_nasc);
+                Banco.comando.Parameters.AddWithValue("@renda", renda);
+                Banco.comando.Parameters.AddWithValue("@cpf", cpf);
+                Banco.comando.Parameters.AddWithValue("@foto", foto);
+                Banco.comando.Parameters.AddWithValue("@venda", venda);
+                Banco.comando.Parameters.AddWithValue("@id", venda);
+                Banco.comando.ExecuteNonQuery();
+
+                Banco.FecharConexao();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
