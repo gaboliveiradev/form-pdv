@@ -68,6 +68,17 @@ namespace _211074
                     "ativo char(1) NOT NULL DEFAULT \"S\" )", conexao);
                 comando.ExecuteNonQuery();
 
+                comando = new MySqlCommand("CREATE TABLE IF NOT EXISTS Clientes" +
+                    "(id integer auto_increment primary key, " +
+                    "nome char(40), " +
+                    "id_cidade integer, " +
+                    "data_nasc date, " +
+                    "renda decimal(10, 2), " +
+                    "cpf char(14), " +
+                    "foto varchar(100), " +
+                    "venda boolean)", conexao);
+                comando.ExecuteNonQuery();
+
                 FecharConexao();
             } catch (Exception err)
             {
