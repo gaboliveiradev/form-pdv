@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using _211074.View.modules.Cidades;
 using _211074.View.modules.Marcas;
 using _211074.View.modules.Categorias;
+using _211074.View.modules.Clientes;
 
 namespace _211074
 {
@@ -35,6 +36,12 @@ namespace _211074
         {
             FrmCategoria frmCategoria = new FrmCategoria();
             frmCategoria.Show();
+        }
+
+        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmClientes frmClientes = new FrmClientes();
+            frmClientes.Show();
         }
     }
 }

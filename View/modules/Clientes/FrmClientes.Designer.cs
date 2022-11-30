@@ -47,7 +47,6 @@
             this.cboCidade = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.cboUF = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.mskCPF = new System.Windows.Forms.MaskedTextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -55,6 +54,8 @@
             this.label8 = new System.Windows.Forms.Label();
             this.txtRenda = new System.Windows.Forms.TextBox();
             this.chkVenda = new System.Windows.Forms.CheckBox();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.txtUF = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnConsultar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
@@ -248,15 +249,6 @@
             this.label5.TabIndex = 37;
             this.label5.Text = "UF";
             // 
-            // cboUF
-            // 
-            this.cboUF.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboUF.FormattingEnabled = true;
-            this.cboUF.Location = new System.Drawing.Point(494, 178);
-            this.cboUF.Name = "cboUF";
-            this.cboUF.Size = new System.Drawing.Size(129, 32);
-            this.cboUF.TabIndex = 38;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -325,12 +317,21 @@
             this.chkVenda.Text = "Bloquear a venda?";
             this.chkVenda.UseVisualStyleBackColor = true;
             // 
+            // txtUF
+            // 
+            this.txtUF.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUF.Location = new System.Drawing.Point(494, 177);
+            this.txtUF.Name = "txtUF";
+            this.txtUF.Size = new System.Drawing.Size(129, 32);
+            this.txtUF.TabIndex = 48;
+            // 
             // FrmClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(874, 600);
             this.ControlBox = false;
+            this.Controls.Add(this.txtUF);
             this.Controls.Add(this.chkVenda);
             this.Controls.Add(this.txtRenda);
             this.Controls.Add(this.label8);
@@ -338,7 +339,6 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.mskCPF);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.cboUF);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cboCidade);
@@ -386,7 +386,6 @@
         private System.Windows.Forms.ComboBox cboCidade;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox cboUF;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.MaskedTextBox mskCPF;
         private System.Windows.Forms.Label label7;
@@ -394,5 +393,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtRenda;
         private System.Windows.Forms.CheckBox chkVenda;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.TextBox txtUF;
     }
 }
