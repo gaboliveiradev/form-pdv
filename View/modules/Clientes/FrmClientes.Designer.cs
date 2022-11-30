@@ -54,12 +54,13 @@
             this.label8 = new System.Windows.Forms.Label();
             this.txtRenda = new System.Windows.Forms.TextBox();
             this.chkVenda = new System.Windows.Forms.CheckBox();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.txtUF = new System.Windows.Forms.TextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnConsultar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -122,6 +123,7 @@
             this.btnFechar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnFechar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnFechar.UseVisualStyleBackColor = true;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
             // btnExcluir
             // 
@@ -214,7 +216,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(643, 11);
+            this.pictureBox1.Location = new System.Drawing.Point(5, 10);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(211, 211);
             this.pictureBox1.TabIndex = 34;
@@ -325,12 +327,22 @@
             this.txtUF.Size = new System.Drawing.Size(129, 32);
             this.txtUF.TabIndex = 48;
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.pictureBox1);
+            this.groupBox2.Location = new System.Drawing.Point(632, 11);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(220, 227);
+            this.groupBox2.TabIndex = 49;
+            this.groupBox2.TabStop = false;
+            // 
             // FrmClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(874, 600);
             this.ControlBox = false;
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.txtUF);
             this.Controls.Add(this.chkVenda);
             this.Controls.Add(this.txtRenda);
@@ -342,7 +354,6 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cboCidade);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnFechar);
             this.Controls.Add(this.btnExcluir);
@@ -361,6 +372,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnConsultar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -393,7 +405,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtRenda;
         private System.Windows.Forms.CheckBox chkVenda;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.TextBox txtUF;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }
