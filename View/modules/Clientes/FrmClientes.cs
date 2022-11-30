@@ -149,5 +149,16 @@ namespace _211074.View.modules.Clientes
                 carregarGrid("");
             }
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            limparControles();
+            carregarGrid("");
+        }
+
+        private void btnConsultar_Click(object sender, EventArgs e)
+        {
+            carregarGrid(txtPesquisar.Text);
+        }
     }
 }
