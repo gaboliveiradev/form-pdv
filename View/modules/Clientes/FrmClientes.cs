@@ -109,5 +109,27 @@ namespace _211074.View.modules.Clientes
                 picFoto.ImageLocation = dgvClientes.CurrentRow.Cells["foto"].Value.ToString();
             }
         }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            if (txtCodigo.Text == "") return;
+
+            ClienteModel model = new ClienteModel()
+            {
+                id = int.Parse(txtCodigo.Text),
+                nome = txtNome.Text,
+                id_cidade = (int)cboCidade.SelectedValue,
+                data_nasc = dtpDataNasc.Value,
+                renda = double.Parse(txtRenda.Text),
+                cpf = mskCPF.Text,
+                foto = picFoto.ImageLocation,
+                venda = chkVenda.Checked
+            };
+
+            model.Alterar();
+
+            limparControles();
+            carregarGrid("");
+        }
     }
 }

@@ -76,7 +76,8 @@ namespace _211074
                     "renda decimal(10, 2), " +
                     "cpf char(14), " +
                     "foto varchar(100), " +
-                    "venda boolean)", conexao);
+                    "venda boolean, " +
+                    "ativo char(1) NOT NULL DEFAULT \"S\" )", conexao);
                 comando.ExecuteNonQuery();
 
                 FecharConexao();

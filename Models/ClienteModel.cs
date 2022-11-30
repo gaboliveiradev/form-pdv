@@ -16,6 +16,7 @@ namespace _211074.Models
         public string cpf { get; set; }
         public string foto { get; set; }
         public bool venda { get; set; }
+        public string ativo { get; set; }
 
         public void Incluir()
         {
@@ -75,7 +76,8 @@ namespace _211074.Models
             try
             {
                 Banco.AbrirConexao();
-                Banco.comando = new MySqlCommand("DELETE FROM clientes WHERE id = @id", Banco.conexao);
+                Banco.comando = new MySqlCommand("UPDATE clientes SET ativo = @ativo WHERE id = @id", Banco.conexao);
+                Banco.comando.Parameters.AddWithValue("@ativo", ativo)
                 Banco.comando.Parameters.AddWithValue("@id", id);
                 Banco.comando.ExecuteNonQuery();
 
