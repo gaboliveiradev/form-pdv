@@ -77,7 +77,7 @@ namespace _211074.Models
             {
                 Banco.AbrirConexao();
                 Banco.comando = new MySqlCommand("UPDATE clientes SET ativo = @ativo WHERE id = @id", Banco.conexao);
-                Banco.comando.Parameters.AddWithValue("@ativo", ativo)
+                Banco.comando.Parameters.AddWithValue("@ativo", ativo);
                 Banco.comando.Parameters.AddWithValue("@id", id);
                 Banco.comando.ExecuteNonQuery();
 
