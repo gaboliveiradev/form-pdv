@@ -96,7 +96,7 @@ namespace _211074.Models
                 Banco.AbrirConexao();
                 Banco.comando = new MySqlCommand("SELECT cl.*, ci.nome cidade, " +
                 "ci.uf FROM clientes cl INNER JOIN cidades ci ON (ci.id = cl.id_cidade) " +
-                "WHERE cl.nome LIKE @nome ORDER BY cl.nome", Banco.conexao);
+                "WHERE cl.nome LIKE @nome AND cl.ativo = \"S\" ORDER BY cl.nome", Banco.conexao);
 
                 Banco.comando.Parameters.AddWithValue("@nome", nome + "%");
                 Banco.adaptador = new MySqlDataAdapter(Banco.comando);
