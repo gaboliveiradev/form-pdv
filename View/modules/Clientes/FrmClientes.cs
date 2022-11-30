@@ -72,5 +72,26 @@ namespace _211074.View.modules.Clientes
             ofdArquivo.ShowDialog();
             picFoto.ImageLocation = ofdArquivo.FileName;
         }
+
+        private void btnIncluir_Click(object sender, EventArgs e)
+        {
+            if (txtNome.Text == "") return;
+
+            ClienteModel model = new ClienteModel()
+            {
+                nome = txtNome.Text,
+                id_cidade = (int)cboCidade.SelectedValue,
+                data_nasc = dtpDataNasc.Value,
+                renda = double.Parse(txtRenda.Text),
+                cpf = mskCPF.Text,
+                foto = picFoto.ImageLocation,
+                venda = chkVenda.Checked
+            };
+
+            model.Incluir();
+
+            limparControles();
+            carregarGrid("");
+        }
     }
 }
