@@ -56,6 +56,7 @@
             this.chkVenda = new System.Windows.Forms.CheckBox();
             this.txtUF = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.ofdArquivo = new System.Windows.Forms.OpenFileDialog();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnConsultar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
@@ -338,6 +339,10 @@
             this.groupBox2.TabIndex = 49;
             this.groupBox2.TabStop = false;
             // 
+            // ofdArquivo
+            // 
+            this.ofdArquivo.FileName = "ofdArquivo";
+            // 
             // FrmClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -410,5 +415,6 @@
         private System.Windows.Forms.CheckBox chkVenda;
         private System.Windows.Forms.TextBox txtUF;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.OpenFileDialog ofdArquivo;
     }
 }

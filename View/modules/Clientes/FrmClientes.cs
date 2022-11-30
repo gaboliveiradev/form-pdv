@@ -67,7 +67,10 @@ namespace _211074.View.modules.Clientes
 
         private void picFoto_Click(object sender, EventArgs e)
         {
-
+            ofdArquivo.InitialDirectory = "C:/";
+            ofdArquivo.FileName = "";
+            ofdArquivo.ShowDialog();
+            picFoto.ImageLocation = ofdArquivo.FileName;
         }
     }
 }
