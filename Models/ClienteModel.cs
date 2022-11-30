@@ -50,7 +50,7 @@ namespace _211074.Models
             {
                 Banco.AbrirConexao();
                 Banco.comando = new MySqlCommand("UPDATE clientes SET nome = @nome, id_cidade = @id_cidade, " +
-                "data_nasc = @data_nasc, renda = @renda, cpf = @cpf, foto = @foto, venda = @venda, " +
+                "data_nasc = @data_nasc, renda = @renda, cpf = @cpf, foto = @foto, venda = @venda " +
                 "WHERE id = @id", Banco.conexao);
 
                 Banco.comando.Parameters.AddWithValue("@nome", nome);
