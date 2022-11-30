@@ -93,6 +93,7 @@
             this.dgvClientes.Name = "dgvClientes";
             this.dgvClientes.Size = new System.Drawing.Size(824, 157);
             this.dgvClientes.TabIndex = 13;
+            this.dgvClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes_CellClick);
             // 
             // txtPesquisar
             // 

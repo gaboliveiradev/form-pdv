@@ -93,5 +93,21 @@ namespace _211074.View.modules.Clientes
             limparControles();
             carregarGrid("");
         }
+
+        private void dgvClientes_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(dgvClientes.Rows.Count > 0)
+            {
+                txtCodigo.Text = dgvClientes.CurrentRow.Cells["id"].Value.ToString();
+                txtNome.Text = dgvClientes.CurrentRow.Cells["nome"].Value.ToString();
+                cboCidade.Text = dgvClientes.CurrentRow.Cells["cidade"].Value.ToString();
+                txtUF.Text = dgvClientes.CurrentRow.Cells["uf"].Value.ToString();
+                chkVenda.Checked = (bool)dgvClientes.CurrentRow.Cells["venda"].Value;
+                mskCPF.Text = dgvClientes.CurrentRow.Cells["cpf"].Value.ToString();
+                dtpDataNasc.Text = dgvClientes.CurrentRow.Cells["data_nasc"].Value.ToString();
+                txtRenda.Text = dgvClientes.CurrentRow.Cells["renda"].Value.ToString();
+                picFoto.ImageLocation = dgvClientes.CurrentRow.Cells["foto"].Value.ToString();
+            }
+        }
     }
 }
