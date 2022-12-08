@@ -19,7 +19,7 @@ namespace _211074
                 string server = "localhost";
                 string porta = "3307";
                 string uid = "root";
-                string pwd = "etecjau";
+                string pwd = "mysqldev@2835";
 
                 conexao = new MySqlConnection($"server={server};port={porta};uid={uid};pwd={pwd}");
                 conexao.Open();
@@ -78,6 +78,18 @@ namespace _211074
                     "foto varchar(100), " +
                     "venda boolean, " +
                     "ativo char(1) NOT NULL DEFAULT \"S\" )", conexao);
+                comando.ExecuteNonQuery();
+
+                comando = new MySqlCommand("CREATE TABLE IF NOT EXISTS Produtos" +
+                    "(id integer auto_increment primary key, " +
+                    "descricao char(40), " +
+                    "id_categoria integer, " +
+                    "id_marca integer, " +
+                    "estoque decimal(10, 3), " +
+                    "valor_compra decimal(10, 2), " +
+                    "valor_venda decimal(10, 2), " +
+                    "foto varchar(100), " +
+                    "ativo char(1) NOT NULL DEFAULT \"S\")", conexao);
                 comando.ExecuteNonQuery();
 
                 FecharConexao();
