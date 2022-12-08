@@ -56,14 +56,14 @@
             this.chkVenda = new System.Windows.Forms.CheckBox();
             this.txtUF = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picFotoImagem = new System.Windows.Forms.PictureBox();
             this.ofdArquivo = new System.Windows.Forms.OpenFileDialog();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnConsultar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFoto)).BeginInit();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picFotoImagem)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -346,7 +346,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.pictureBox1);
+            this.groupBox2.Controls.Add(this.picFotoImagem);
             this.groupBox2.Controls.Add(this.picFoto);
             this.groupBox2.Location = new System.Drawing.Point(632, 11);
             this.groupBox2.Name = "groupBox2";
@@ -354,15 +354,16 @@
             this.groupBox2.TabIndex = 49;
             this.groupBox2.TabStop = false;
             // 
-            // pictureBox1
+            // picFotoImagem
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(60, 63);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 100);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 35;
-            this.pictureBox1.TabStop = false;
+            this.picFotoImagem.Image = ((System.Drawing.Image)(resources.GetObject("picFotoImagem.Image")));
+            this.picFotoImagem.Location = new System.Drawing.Point(60, 63);
+            this.picFotoImagem.Name = "picFotoImagem";
+            this.picFotoImagem.Size = new System.Drawing.Size(100, 100);
+            this.picFotoImagem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picFotoImagem.TabIndex = 35;
+            this.picFotoImagem.TabStop = false;
+            this.picFotoImagem.Click += new System.EventHandler(this.picFotoImagem_Click);
             // 
             // ofdArquivo
             // 
@@ -406,7 +407,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFoto)).EndInit();
             this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picFotoImagem)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -442,6 +443,6 @@
         private System.Windows.Forms.TextBox txtUF;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.OpenFileDialog ofdArquivo;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox picFotoImagem;
     }
 }
