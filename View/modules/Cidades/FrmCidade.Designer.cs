@@ -203,6 +203,7 @@
             this.dgvCidades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCidades.Location = new System.Drawing.Point(6, 71);
             this.dgvCidades.Name = "dgvCidades";
+            this.dgvCidades.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCidades.Size = new System.Drawing.Size(760, 157);
             this.dgvCidades.TabIndex = 13;
             this.dgvCidades.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCidades_CellClick);
