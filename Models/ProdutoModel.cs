@@ -88,5 +88,30 @@ namespace _211074.Models
                 MessageBox.Show(err.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        public DataTable Consultar()
+        {
+            try
+            {
+                Banco.AbrirConexao();
+                Banco.comando = new MySqlCommand("SELECT p.*, m.marca, c.categoria FROM " +
+                    "Produtos p INNER JOIN Marcas m ON (m.id = p.id_marca) " +
+                    "INNER JOIN Categorias c ON (c.id = p.id_categoria) WHERE p.descricao LIKE @descricao AND p.ativo = \"S\" " +
+                    "ORDER BY p.descricao", Banco.conexao);
+
+                Banco.comando.Parameters.AddWithValue("@descricao", descricao + "%");
+                Banco.adaptador = new MySqlDataAdapter(Banco.comando);
+                Banco.datTabela = new DataTable();
+                Banco.adaptador.Fill(Banco.datTabela);
+
+                Banco.FecharConexao();
+                return Banco.datTabela;
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
     }
 }
