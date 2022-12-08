@@ -22,9 +22,9 @@ namespace _211074.View.modules.Categorias
 
         public void carregarGrid(string pesquisa)
         {
-            MarcaModel model = new MarcaModel()
+            CategoriaModel model = new CategoriaModel()
             {
-                marca = pesquisa
+                categoria = pesquisa
             };
 
             dgvCategorias.DataSource = model.Consultar();
@@ -71,7 +71,7 @@ namespace _211074.View.modules.Categorias
         private void btnExcluir_Click(object sender, EventArgs e)
         {
             if (txtCodigo.Text == String.Empty) return;
-            if (MessageBox.Show("Deseja excluir a marca?", "Exclusão", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Deseja excluir a categoria?", "Exclusão", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 CategoriaModel model = new CategoriaModel()
                 {
@@ -100,8 +100,8 @@ namespace _211074.View.modules.Categorias
         {
             if (dgvCategorias.RowCount > 0)
             {
-                txtCodigo.Text = dgvCategorias.CurrentRow.Cells["ID"].Value.ToString();
-                txtCategoria.Text = dgvCategorias.CurrentRow.Cells["CATEGORIA"].Value.ToString();
+                txtCodigo.Text = dgvCategorias.CurrentRow.Cells["id"].Value.ToString();
+                txtCategoria.Text = dgvCategorias.CurrentRow.Cells["categoria"].Value.ToString();
             }
         }
     }

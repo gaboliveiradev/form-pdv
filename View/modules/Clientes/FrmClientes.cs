@@ -160,13 +160,5 @@ namespace _211074.View.modules.Clientes
         {
             carregarGrid(txtPesquisar.Text);
         }
-
-        private void picFotoImagem_Click(object sender, EventArgs e)
-        {
-            ofdArquivo.InitialDirectory = "C:/";
-            ofdArquivo.FileName = "";
-            ofdArquivo.ShowDialog();
-            picFoto.ImageLocation = ofdArquivo.FileName;
-        }
     }
 }

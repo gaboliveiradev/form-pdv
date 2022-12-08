@@ -5,6 +5,7 @@ using _211074.View.modules.Cidades;
 using _211074.View.modules.Marcas;
 using _211074.View.modules.Categorias;
 using _211074.View.modules.Clientes;
+using _211074.View.modules.Produtos;
 
 namespace _211074
 {
@@ -42,6 +43,12 @@ namespace _211074
         {
             FrmClientes frmClientes = new FrmClientes();
             frmClientes.Show();
+        }
+
+        private void produtosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmProduto frmProduto = new FrmProduto();
+            frmProduto.Show();
         }
     }
 }

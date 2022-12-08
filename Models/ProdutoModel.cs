@@ -24,7 +24,7 @@ namespace _211074.Models
             {
                 Banco.AbrirConexao();
                 Banco.comando = new MySqlCommand("INSERT INTO produtos (descricao, id_categoria, id_marca, estoque," +
-                "valor_compra, valor_venda, foto, ativo) VALUES (@descricao, @id_categoria, @id_marca, @estoque, @valor_compra," +
+                "valor_compra, valor_venda, foto) VALUES (@descricao, @id_categoria, @id_marca, @estoque, @valor_compra," +
                 "@valor_venda, @foto)", Banco.conexao);
 
                 Banco.comando.Parameters.AddWithValue("@descricao", descricao);

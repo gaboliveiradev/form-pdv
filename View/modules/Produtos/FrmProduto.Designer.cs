@@ -34,7 +34,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtDescricao = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.picFotoImagem = new System.Windows.Forms.PictureBox();
             this.picFoto = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.cboCategoria = new System.Windows.Forms.ComboBox();
@@ -58,7 +57,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.ofdArquivo = new System.Windows.Forms.OpenFileDialog();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picFotoImagem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFoto)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnConsultar)).BeginInit();
@@ -104,24 +102,12 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.picFotoImagem);
             this.groupBox2.Controls.Add(this.picFoto);
             this.groupBox2.Location = new System.Drawing.Point(642, 12);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(294, 286);
             this.groupBox2.TabIndex = 50;
             this.groupBox2.TabStop = false;
-            // 
-            // picFotoImagem
-            // 
-            this.picFotoImagem.Image = ((System.Drawing.Image)(resources.GetObject("picFotoImagem.Image")));
-            this.picFotoImagem.Location = new System.Drawing.Point(47, 43);
-            this.picFotoImagem.Name = "picFotoImagem";
-            this.picFotoImagem.Size = new System.Drawing.Size(200, 200);
-            this.picFotoImagem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picFotoImagem.TabIndex = 35;
-            this.picFotoImagem.TabStop = false;
-            this.picFotoImagem.Click += new System.EventHandler(this.picFotoImagem_Click);
             // 
             // picFoto
             // 
@@ -386,7 +372,6 @@
             this.Text = "Cadastro de Produtos";
             this.Load += new System.EventHandler(this.FrmProduto_Load);
             this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picFotoImagem)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFoto)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -404,7 +389,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtDescricao;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.PictureBox picFotoImagem;
         private System.Windows.Forms.PictureBox picFoto;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cboCategoria;

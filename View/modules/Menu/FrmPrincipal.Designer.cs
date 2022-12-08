@@ -34,6 +34,7 @@
             this.marcasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.categoriasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.produtosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,7 +56,8 @@
             this.cidadesToolStripMenuItem,
             this.marcasToolStripMenuItem,
             this.categoriasToolStripMenuItem,
-            this.clientesToolStripMenuItem});
+            this.clientesToolStripMenuItem,
+            this.produtosToolStripMenuItem});
             this.cadastrosToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.cadastrosToolStripMenuItem.Name = "cadastrosToolStripMenuItem";
             this.cadastrosToolStripMenuItem.Size = new System.Drawing.Size(91, 25);
@@ -89,6 +91,13 @@
             this.clientesToolStripMenuItem.Text = "Clientes";
             this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
+            // produtosToolStripMenuItem
+            // 
+            this.produtosToolStripMenuItem.Name = "produtosToolStripMenuItem";
+            this.produtosToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.produtosToolStripMenuItem.Text = "Produtos";
+            this.produtosToolStripMenuItem.Click += new System.EventHandler(this.produtosToolStripMenuItem_Click);
+            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -116,6 +125,7 @@
         private System.Windows.Forms.ToolStripMenuItem marcasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem categoriasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem produtosToolStripMenuItem;
     }
 }
 
